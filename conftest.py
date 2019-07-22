@@ -15,7 +15,7 @@ def pytest_addoption(parser):
     testplan.addoption("--testplan", 
         action="store",
         default=None,
-        help="generate csv containing test metadata"
+        help="generate csv containing test metadata and exit without running tests."
     )
 
     gcs = parser.getgroup('gcs')
