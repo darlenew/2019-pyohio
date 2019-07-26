@@ -1,10 +1,12 @@
+import os
+
 from google.cloud import storage
 
 
 class GCSBucket:
 
     def __init__(self, json_service_key_path, bucket_name):
-        self.json_service_key_path = json_service_key_path
+        self.json_service_key_path = os.path.expanduser(json_service_key_path)
         self.bucket_name = bucket_name
 
         self._bucket = None

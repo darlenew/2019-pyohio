@@ -38,7 +38,8 @@ def pytest_addoption(parser):
         help="filenames are prefixed by a timestamp to uniquely identify the report"
     )
 
-
+# this hook function needs to run before pytest-html's pytest_configure 
+@pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
     global now
 
