@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.mark.performance
 def test_foo():
     """This is the foo test"""
@@ -11,7 +12,9 @@ def test_bar():
     assert True
 
 def test_baz():
-    """The baz test"""
+    """The baz test
+    Make sure we get multiline formatting right.
+    """
     assert True
 
 class TestFoo():
@@ -20,7 +23,7 @@ class TestFoo():
     @pytest.mark.performance
     def test_a(self):
         """The TestFoo.a test.
-        It is pretty simple. 
+        Make it a multiline docstring.
         """
         assert False
 
